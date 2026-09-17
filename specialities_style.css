@@ -1,0 +1,30 @@
+.content-header {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.header-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    width: 100%; 
+    margin-top: 10px; 
+
+    #searchinput {
+        width: 280px; 
+        padding: 6px 12px;
+    }
+    
+    .btn-primary {
+       
+        padding: 6px 14px; 
+        font-size: 14px;
+        white-space: nowrap; 
+    }
+}
+
+.table-container{
+    
+}
