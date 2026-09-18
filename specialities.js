@@ -1,5 +1,6 @@
 
-const tbody = document.getElementById('Especialities-table-body');
+const tbody = document.getElementById('specialities-table-body');
+const searchInput = document.getElementById('searchInput');
  fetch('specialties.json')
  .then(respuesta => respuesta.json())
  .then(data => 
@@ -23,4 +24,13 @@ const tbody = document.getElementById('Especialities-table-body');
                  
             .catch(error => console.error('Error al cargar el JSON:', error));
              
-            
+
+ searchInput.addEventListener('input',(e) => {
+   const textoBusqueda = e.target.value.toLowerCase();
+   const especialidadesFiltradas = allSpecialties.filter(item => 
+        item.name.toLowerCase().includes(textoBusqueda) || 
+        item.description.toLowerCase().includes(textoBusqueda)
+    );
+    
+    renderTable(especialidadesFiltradas);
+});
