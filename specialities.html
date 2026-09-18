@@ -27,7 +27,8 @@
                             <th>ID</th>
                             <th>Nombre de la Especialidad</th>
                             <th>Descripción</th>
-                            
+                            <th>Estado</th>
+                            <th>Acciones</th>
                         </tr>
 
                     </thead>
@@ -35,31 +36,11 @@
 
                     </tbody>
                 </table>
-                <script>
-                    const tbody = document.getElementById('Especialities-table-body');
-                    fetch('specialties.json')
-                    .then(respuesta => respuesta.json())
-                .then(data => 
-                {
-                    data.forEach(item => 
-                    {
-                         const fila = document.createElement('tr');
-                        fila.innerHTML = `
-                        <td>${item.id}</td>
-                        <td>${item.name}</td>
-                        <td>${item.description}</td>`;
-                             
-                        tbody.appendChild(fila);
-                    });
-                 })
-                 
-                 .catch(error => console.error('Error al cargar el JSON:', error));
-             
-                </script>
+               
             </div>
         </main>
 
     </div>         
-<script src="especialities.js"></script>
+<script src="specialities.js"></script>
 </body>
 </html>
