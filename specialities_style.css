@@ -4,7 +4,14 @@
     display: flex;
     min-height: 100vh;
 }
-
+.sidebar{
+    width: 250px; 
+    background-color: #ffffff; 
+    border-right: 1px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
 .content-header {
     display: flex;
     flex-direction: column; 
@@ -24,26 +31,38 @@
         padding: 6px 12px;
     }
     
-    .btn-primary {
+    .btn-primary 
+    {
        
         padding: 6px 14px; 
         font-size: 14px;
         white-space: nowrap; 
+        background-color: rgb(101, 101, 235);
+        border-color: #dee4eb;
     }
 }
 
-.table-container{
+.table-container
+{
     background: #ffffff;
     border-radius: 8px;
     border: 1px solid #e2e8f0;
-    table{
+    table
+    {
     width: 100%;             
     border-collapse: collapse; 
     margin-top: 20px;       
     font-size: 14px;
-    thead{
-    background-color:#c6d0db;
+    thead
+    {
+    background-color:#dee4eb;
     font-size: 18px;
+    }
+    tbody
+    {
+    background-color:white;
+    border-collapse: collapse;
+    border-color: black ;
     }
     }
 }

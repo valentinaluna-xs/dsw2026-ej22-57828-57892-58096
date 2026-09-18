@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="Admin-layout">
+      
         <main class="main-content">
             <div class="content-header">
                 <div>
@@ -23,54 +24,42 @@
                 <table>
                     <thead>
                         <tr>
+                            <th>ID</th>
                             <th>Nombre de la Especialidad</th>
                             <th>Descripción</th>
-                            <th>Estado</th>
-                            <th>Acciones</th>
+                            
                         </tr>
+
                     </thead>
                     <tbody id="Especialities-table-body">
-                        <tr>
-                            <td><strong>Cardiologia</strong></td>
-                            <td>Diagnóstico, prevención y tratamiento de las enfermedades del corazón y del sistema circulatorio.</td>
-                            <td><span class="badge active">Active</span></td>
-                            <td><button>Eliminar</button>
-                                <button>Editar</button>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td><strong>Traumatologia</strong></td>
-                            <td>Diagnostico,prevención y tratamiento de los problemas del sistema musculoesquelético (huesos, articulaciones, ligamentos, tendones y músculos).</td>
-                            <td><span class="badge active">Active</span></td>
-                            <td><button>Eliminar</button>
-                                <button>Editar</button>
-                            </td>
-                        </tr>
-                         <tr>
-                            <td><strong>Neurologia</strong></td>
-                            <td>Diagnostico,prevención y tratamiento de las enfermedades del sistema nervioso central (cerebro y médula espinal) y periférico (nervios y músculos).</td>
-                            <td><span class="badge active">Active</span></td>
-                            <td><button>Eliminar</button>
-                                <button>Editar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><strong>Endocrinología</strong></td>
-                            <td>Diagnostico,prevención y tratamiento de las hormonas, el metabolismo y problemas como la diabetes.</td>
-                            <td><span class="badge active">Active</span></td>
-                            <td><button>Eliminar</button>
-                                <button>Editar</button>
-                            </td>
-                        </tr>
 
                     </tbody>
                 </table>
+                <script>
+                    const tbody = document.getElementById('Especialities-table-body');
+                    fetch('specialties.json')
+                    .then(respuesta => respuesta.json())
+                .then(data => 
+                {
+                    data.forEach(item => 
+                    {
+                         const fila = document.createElement('tr');
+                        fila.innerHTML = `
+                        <td>${item.id}</td>
+                        <td>${item.name}</td>
+                        <td>${item.description}</td>`;
+                             
+                        tbody.appendChild(fila);
+                    });
+                 })
+                 
+                 .catch(error => console.error('Error al cargar el JSON:', error));
+             
+                </script>
             </div>
         </main>
 
-    </div>
-          
+    </div>         
 <script src="especialities.js"></script>
 </body>
 </html>
