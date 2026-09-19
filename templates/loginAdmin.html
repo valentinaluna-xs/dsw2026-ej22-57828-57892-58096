@@ -21,11 +21,17 @@
                 <p>Por favor, autentíquese para acceder al portal de proveedores.</p>
             </div>
             <form class="login-form">
-                <label for="username">Nombre de Usuario</label>
-                <input type="text" id="username" name="username" required placeholder="Ingrese ID de admin">
-                <label for="password">Contraseña</label>
-                <input type="password" id="password" name="password" required>
-                <button type="submit">Iniciar Sesión</button>
+                <label for="username" class="form-label">Nombre de Usuario</label>
+                <label class="input-group" for="username">
+                    <span class="material-symbols-outlined input-group__icon">account_circle</span>
+                    <input type="text" id="username" name="username" required placeholder="Ingrese ID de admin">
+                </label>
+                <label for="password" class="form-label">Contraseña</label>
+                <label class="input-group" for="password">
+                    <span class="material-symbols-outlined input-group__icon">lock</span>
+                    <input type="password" id="password" name="password" required placeholder="Ingrese contraseña">
+                </label>
+                <button type="submit">Iniciar Sesión <span class="material-symbols-outlined button__icon">login</span></button>
             </form>
         </div>
         <div class="login__info">
