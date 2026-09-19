@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin</title>
+    <link rel="stylesheet" href="/css/dashboardAdmin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="navbar">
+            <div class="navbar__header">
+                <h2>Admin Portal</h2>
+                <span>Healthcare Management</span>
+            </div>
+            <div class="navbar__menu">
+                <ul class="navbar__menu-list">
+                    <li class="navbar__menu-item">
+                        <a href="#">
+                            <span class="material-symbols-outlined">dashboard</span>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="navbar__menu-item">
+                        <a href="#">
+                            <span class="material-symbols-outlined">medical_services</span>
+                            Doctores
+                        </a>
+                    </li>
+                    <li class="navbar__menu-item">
+                        <a href="#">
+                            <span class="material-symbols-outlined">category</span>
+                            Especialidades
+                        </a>
+                    </li>
+                    <li class="navbar__menu-item">
+                        <a href="#">
+                            <span class="material-symbols-outlined">person_search</span>
+                            Búsqueda de Pacientes
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar__footer">
+                <ul class="navbar__footer-list">
+                    <li class="navbar__footer-item">
+                        <a href="#">
+                            <span class="material-symbols-outlined">settings</span>
+                            Configuración
+                        </a>
+                    </li>
+                    <li class="navbar__footer-item">
+                        <a href="#">
+                            <span class="material-symbols-outlined">logout</span>
+                            Cerrar Sesión
+                        </a>
+                    </li>
+                </ul>
+                <div class="user-session">
+                    <picture class="user-picture">
+                        <img src="" alt="">
+                    </picture>
+                    <div class="user-info">
+                        <h5 class="user-infor--name">
+                            Nacho Paz
+                        </h5>
+                        <p class="user-infor--cargo">
+                            Administrador
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <main class="dashboard">
+            <div class="dashboard__header">
+                <div class="dashboard__header-content"></div>
+                    <h1>Vista General de Gestión</h1>
+                    <p>Configure el personal médico y las especialidades del departamento.</p>
+                </div>
+                <div class="dashboard__header-menu"></div>
+                    <button class="menu-btn primary">
+                        <span class="material-symbols-outlined">add</span>
+                        Agregar Nuevo Doctor
+                    </button>
+                    <button class="menu-btn secondary">
+                        <span class="material-symbols-outlined">category</span>
+                        Agregar Nueva Especialidad
+                    </button>
+                </div>
+            </div>
+            <section class="dashboard__stats">
+                <div class="dashboard-card">
+                    <div class="card__header">
+                        <span class="material-symbols-outlined">medical_services</span>
+                        <p class="card__header-info">+4 este mes</p>
+                    </div>
+                    <div class="card__content">
+                        <p class="card__content-title">Doctores Activos</p>
+                        <p class="card__content-cant">124</p>
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="card__header">
+                        <span class="material-symbols-outlined">grid_view</span>
+                        <p class="card__header-info">Estable</p>
+                    </div>
+                    <div class="card__content">
+                        <p class="card__content-title">Especialidades Activas</p>
+                        <p class="card__content-cant">32</p>
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="card__header">
+                        <span class="material-symbols-outlined">event_available</span>
+                        <p class="card__header-info">Hoy</p>
+                    </div>
+                    <div class="card__content">
+                        <p class="card__content-title">Turnos Confirmados Para Hoy</p>
+                        <p class="card__content-cant">48</p>
+                    </div>
+                </div>
+            </section>
+            <section class="dashboard__table">
+                <div class="table-header">
+                    <h2>Directorio de Profesionales Médicos</h2>
+                    <label class="input-group" for="search">
+                        <span class="material-symbols-outlined input-group__icon">search</span>
+                        <input type="text" name="search" id="search" placeholder="Buscar...">
+                    </label>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Especialidad</th>
+                            <th>Disponibilidad</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dr. Jame Wilson</td>
+                            <td>Cardiología</td>
+                            <td>
+                                <span class="status status--active">Activo</span>
+                            </td>
+                            <td>
+                                <button>
+                                    <span class="material-symbols-outlined">edit</span>
+                                </button>
+                                <button>
+                                    <span class="material-symbols-outlined">delete</span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Elena Rodríguez</td>
+                            <td>Neurología</td>
+                            <td>
+                                <span class="status status--active">Activo</span>
+                            </td>
+                            <td>
+                                <button>
+                                    <span class="material-symbols-outlined">edit</span>
+                                </button>
+                                <button>
+                                    <span class="material-symbols-outlined">delete</span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Robert Chen</td>
+                            <td>Pedriatría</td>
+                            <td>
+                                <span class="status status--license">De Licencia</span>
+                            </td>
+                            <td>
+                                <button>
+                                    <span class="material-symbols-outlined">edit</span>
+                                </button>
+                                <button>
+                                    <span class="material-symbols-outlined">delete</span>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="table-pagination">
+                    <p>Mostrando 1 a 3 de 124 resultados</p>
+                    <div class="table-pagination-actions">
+                        <button class="material-symbols-outlined">chevron_left</button>
+                        <button class="material-symbols-outlined">chevron_right</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
