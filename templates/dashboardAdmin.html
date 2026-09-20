@@ -7,6 +7,11 @@
     <title>Dashboard Admin</title>
     <link rel="stylesheet" href="/css/dashboardAdmin.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body>
@@ -60,14 +65,12 @@
                     </li>
                 </ul>
                 <div class="user-session">
-                    <picture class="user-picture">
-                        <img src="" alt="">
-                    </picture>
+                    <img src="/img/Editada.png" alt="Nacho Paz" class="user-picture">
                     <div class="user-info">
-                        <h5 class="user-infor--name">
+                        <h5 class="user-info__name">
                             Nacho Paz
                         </h5>
-                        <p class="user-infor--cargo">
+                        <p class="user-info__cargo">
                             Administrador
                         </p>
                     </div>
@@ -76,16 +79,16 @@
         </nav>
         <main class="dashboard">
             <div class="dashboard__header">
-                <div class="dashboard__header-content"></div>
+                <div class="dashboard__header-content">
                     <h1>Vista General de Gestión</h1>
-                    <p>Configure el personal médico y las especialidades del departamento.</p>
+                    <p>Configure el personal médico y las especialidades del departamento</p>
                 </div>
-                <div class="dashboard__header-menu"></div>
-                    <button class="menu-btn primary">
+                <div class="dashboard__header-menu">
+                    <button class="menu-btn menu-btn-primary">
                         <span class="material-symbols-outlined">add</span>
                         Agregar Nuevo Doctor
                     </button>
-                    <button class="menu-btn secondary">
+                    <button class="menu-btn menu-btn-secondary">
                         <span class="material-symbols-outlined">category</span>
                         Agregar Nueva Especialidad
                     </button>
@@ -142,7 +145,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Dr. Jame Wilson</td>
+                            <td>Dr. James Wilson</td>
                             <td>Cardiología</td>
                             <td>
                                 <span class="status status--active">Activo</span>
@@ -173,7 +176,7 @@
                         </tr>
                         <tr>
                             <td>Dr. Robert Chen</td>
-                            <td>Pedriatría</td>
+                            <td>Pediatría</td>
                             <td>
                                 <span class="status status--license">De Licencia</span>
                             </td>
