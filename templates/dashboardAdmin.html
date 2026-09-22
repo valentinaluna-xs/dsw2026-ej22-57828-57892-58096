@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -11,15 +11,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-
+    <script src="/js/dashboardAdmin.js" defer></script>
+    <!-- defer es para que cargue el script después de que el HTML se haya cargado, el DOM -->
 </head>
 
 <body>
     <div class="wrapper">
-        <nav class="navbar">
+        <nav class="navbar navbar--open">
             <div class="navbar__header">
-                <h2>Admin Portal</h2>
-                <span>Healthcare Management</span>
+                <div class="navbar__header-title">
+                    <h2>Admin Portal</h2>
+                    <span>Healthcare Management</span>
+                </div>
+                <button class="navbar__close" type="button" aria-label="Cerrar menú">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </button>
             </div>
             <div class="navbar__menu">
                 <ul class="navbar__menu-list">
@@ -77,7 +85,11 @@
                 </div>
             </div>
         </nav>
+        <div class="navbar-overlay"> </div>
         <main class="dashboard">
+            <button class="navbar__toggle" type="button" aria-label="Abrir menú">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
             <div class="dashboard__header">
                 <div class="dashboard__header-content">
                     <h1>Vista General de Gestión</h1>
