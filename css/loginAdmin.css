@@ -1,0 +1,193 @@
+:root {
+    --primary-color: #0a3b73;
+    --secondary-color: #c3eeff;
+    --tercer-color: #edf6ff;
+    --bg-color: #fff;
+    --text-dark: #1f2937;
+    --grey-color: #989898;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle at center,
+            #0e4e94 0%,
+            #02254b 100%);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login {
+    /* width: clamp(300px, 50%, 400px); */
+    width: min(400px, calc(100% - 32px));
+}
+
+.login__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.header__logo {
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--primary-color);
+    background-color: var(--bg-color);
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+    width: fit-content;
+}
+
+.header__name {
+    font-size: 1.8rem;
+    font-weight: 100;
+    color: var(--bg-color);
+}
+
+.login__content {
+    padding: 20px;
+    background-color: var(--bg-color);
+    border-radius: 5px 5px 0 0;
+}
+
+.login-bienvenida {
+    margin-bottom: 10px;
+}
+
+.login-bienvenida h2 {
+    font-size: 1.1rem;
+    font-weight: 00;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.login-bienvenida p {
+    font-size: .9rem;
+    font-weight: 300;
+    color: var(--text-dark);
+}
+
+.login-form {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: var(--primary-color);
+}
+
+.login-form .form-label {
+    font-size: .9rem;
+    font-weight: 400;
+    width: fit-content;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+    background-color: var(--tercer-color);
+    border-radius: 4px;
+    border: 1.2px solid var(--grey-color);
+    cursor: pointer;
+    padding-left: 7px;
+    margin-bottom: 10px;
+    position: relative;
+    transition: border-color .3s;
+}
+
+.input-group__icon {
+    font-size: 1.1rem;
+    color: var(--grey-color);
+}
+
+.login-form input {
+    background-color: inherit;
+    width: 100%;
+    padding: 8px;
+    outline: none;
+    border-radius: 4px;
+    border: none;
+}
+
+.login-form button {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: .9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    transition: background-color .5s, color .5s;
+}
+
+.login__info {
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    border-radius: 0px 0px 5px 5px;
+    padding: 20px;
+}
+
+.login__info>span {
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: var(--primary-color);
+}
+
+.login__info>p {
+    font-size: .9rem;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.input-group::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: var(--primary-color);
+    bottom: 0;
+    left: 0;
+    width: 0;
+    transition: width .3s ease;
+    border-radius: 4px;
+}
+
+.input-group:hover::before {
+    width: 100%;
+}
+
+.input-group:focus-within {
+    border-color: var(--primary-color);
+}
+
+.input-group:focus-within .input-group__icon {
+    color: var(--primary-color);
+}
+
+.input-group:focus-within::before {
+    width: 100%;
+}
+
+.login-form button:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
