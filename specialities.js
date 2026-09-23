@@ -1,5 +1,6 @@
 const tbody = document.getElementById('specialities-table-body');
 const searchInput = document.getElementById('searchInput');
+const cardCantidad = document.querySelector('.dashboard-card .card__content-cant'); 
 
 let filasEspecialidades = [];
 
@@ -18,6 +19,10 @@ fetch('specialties.json')
             <button class="btn-delete">Eliminar</button>
             </td>`;
         tbody.appendChild(fila);
+
+        if (cardCantidad) {
+            cardCantidad.textContent = data.length; 
+        }
         
         filasEspecialidades.push({
             elemento: fila,
@@ -39,3 +44,6 @@ searchInput.addEventListener('input', (e) => {
         }
     });
 });
+
+
+   

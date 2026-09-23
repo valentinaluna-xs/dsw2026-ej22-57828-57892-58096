@@ -1,15 +1,89 @@
 <!DOCTYPE html> 
 <html lang="es">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Admin - Especialidad - Listado</title>
-   <link rel="stylesheet" href="specialities_style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Especialidad - Listado</title>
+    <!-- Enlaces compartidos y fuentes del grupo -->
+    <link rel="stylesheet" href="/css/dashboardAdmin.css">
+    <link rel="stylesheet" href="specialities_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="/js/dashboardAdmin.js" defer></script>
 </head>
 <body>
-    <div class="Admin-layout">
-      
-        <main class="main-content">
+    <div class="wrapper">
+        <nav class="navbar navbar--open">
+            <div class="navbar__header">
+                <div class="navbar__header-title">
+                    <h2>Admin Portal</h2>
+                    <span>Healthcare Management</span>
+                </div>
+                <button class="navbar__close" type="button" aria-label="Cerrar menú">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <div class="navbar__menu">
+                <ul class="navbar__menu-list">
+                    <li class="navbar__menu-item">
+                        <a href="dashboardAdmin.html">
+                            <span class="material-symbols-outlined">dashboard</span>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="navbar__menu-item">
+                        <a href="#">
+                            <span class="material-symbols-outlined">medical_services</span>
+                            Doctores
+                        </a>
+                    </li>
+                    <li class="navbar__menu-item">
+                        <a href="specialities.html" class="active">
+                            <span class="material-symbols-outlined">category</span>
+                            Especialidades
+                        </a>
+                    </li>
+                    <li class="navbar__menu-item">
+                        <a href="#">
+                            <span class="material-symbols-outlined">person_search</span>
+                            Búsqueda de Pacientes
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar__footer">
+                <ul class="navbar__footer-list">
+                    <li class="navbar__footer-item">
+                        <a href="#">
+                            <span class="material-symbols-outlined">settings</span>
+                            Configuración
+                        </a>
+                    </li>
+                    <li class="navbar__footer-item">
+                        <a href="#">
+                            <span class="material-symbols-outlined">logout</span>
+                            Cerrar Sesión
+                        </a>
+                    </li>
+                </ul>
+                <div class="user-session">
+                    <img src="/img/Editada.png" alt="Usuario" class="user-picture">
+                    <div class="user-info">
+                        <h5 class="user-info__name">Luna Acosta</h5>
+                        <p class="user-info__cargo">Administrador</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="navbar-overlay"></div>
+
+        <main class="dashboard">
+            <button class="navbar__toggle" type="button" aria-label="Abrir menú">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            
             <div class="content-header">
                 <div>
                     <h1>Directorio de Especialidades</h1>
@@ -20,6 +94,7 @@
                     <a href="especialities-crear.html" class="btn-primary">+ Nueva Especialidad</a>
                 </div>
             </div>
+            
             <div class="table-container">
                 <table>
                     <thead>
@@ -30,17 +105,46 @@
                             <th>Estado</th>
                             <th>Acciones</th>
                         </tr>
-
                     </thead>
                     <tbody id="specialities-table-body">
-
                     </tbody>
                 </table>
-               
             </div>
+            <section class="dashboard__stats">
+                <div class="dashboard-card">
+                    <div class="card__header">
+                        <span class="material-symbols-outlined">format_list_bulleted</span>
+                    </div>
+                    <div class="card__content">
+                        <p class="card__content-title">TOTAL ESPECIALIDADES</p>
+                        <p class="card__content-cant">24</p>
+                        <span class="card__trend">~ +2 este trimestre</span>
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="card__header">
+                        <span class="material-symbols-outlined">favorite</span>
+                    </div>
+                    <div class="card__content">
+                        <p class="card__content-title">MÁS DEMANDADA</p>
+                        <p class="card__content-cant" style="font-size: 1.1rem; color: var(--primary-color);">Cardiología</p>
+                        <span class="card__trend">15% incremento en citas</span>
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="card__header" style="background-color: var(--secondary-color); color: var(--active-color);">
+                        <span class="material-symbols-outlined">verified</span>
+                    </div>
+                    <div class="card__content">
+                        <p class="card__content-title">NUEVAS ESTE MES</p>
+                        <p class="card__content-cant">03</p>
+                        <span class="card__trend">Psicología, Nutrición...</span>
+                    </div>
+                </div>
+            </section>
         </main>
+    </div>        
 
-    </div>         
-<script src="specialities.js"></script>
+    <script src="specialities.js"></script>
 </body>
 </html>
