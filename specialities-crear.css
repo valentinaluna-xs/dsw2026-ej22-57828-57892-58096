@@ -1,0 +1,163 @@
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.breadcrumbs a {
+    color: #64748b;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.breadcrumbs a:hover {
+    color: #0b3d60;
+    text-decoration: underline;
+}
+
+.breadcrumbs .separator {
+    font-size: 1.1rem;
+    color: #94a3b8;
+}
+
+.breadcrumbs .current {
+    color: #94a3b8;
+}
+
+.form-header {
+    margin-bottom: 30px;
+    border: none;
+}
+
+.page-title {
+    color: #0b3d60;
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.page-subtitle {
+    color: #475569;
+    font-size: 0.95rem;
+}
+
+.form-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    padding: 30px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.form-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 0.95rem;
+    color: #334155;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: #1e293b;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #94a3b8;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #0b3d60;
+}
+
+.select-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.select-wrapper select {
+    appearance: none; 
+    -webkit-appearance: none;
+    cursor: pointer;
+    padding-right: 40px; 
+}
+
+.select-wrapper .select-icon {
+    position: absolute;
+    right: 15px;
+    color: #64748b;
+    pointer-events: none;
+}
+
+/* Botones */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.btn-cancelar, .btn-guardar {
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+}
+
+.btn-cancelar {
+    background-color: transparent;
+    border: 1px solid #0b3d60;
+    color: #0b3d60;
+}
+
+.btn-cancelar:hover {
+    background-color: #f8fafc;
+}
+
+.btn-guardar {
+    background-color: #0b3d60;
+    border: 1px solid #0b3d60;
+    color: white;
+}
+
+.btn-guardar:hover {
+    background-color: #082d47;
+}
+
+.btn-guardar .material-symbols-outlined {
+    font-size: 1.1rem;
+}
