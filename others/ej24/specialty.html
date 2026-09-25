@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 24</title>
+    <script src="specialty.js" defer></script>
+    <link rel="stylesheet" href="/others/ej23/specialties.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <main class="dashboard">
+            <section class="specialty-form">
+                <div class="specialty-form__header">
+                    <h1>Crear nueva especialidad</h1>
+                    <p>
+                        Complete los datos para registrar una nueva especialidad médica.
+                    </p>
+                </div>
+                <form id="specialty-form">
+                    <div class="form-group">
+                        <label for="name"> Nombre</label>
+                        <input type="text" id="name" name="name" placeholder="Ingrese el nombre" required>
+                        <span class="form-error" id="name-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Descripción</label>
+                        <textarea id="description" name="description" placeholder="Ingrese una descripción"
+                            required></textarea>
+                        <span class="form-error" id="description-error"></span>
+                    </div>
+                    <button type="submit" class="btn">
+                        Crear especialidad
+                    </button>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

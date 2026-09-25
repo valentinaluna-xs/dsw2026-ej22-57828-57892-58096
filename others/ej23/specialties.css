@@ -134,3 +134,93 @@ body {
     color: var(--primary-color);
     font-weight: 600;
 }
+
+/* Ejercicio 24 */
+
+.specialty-form {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: var(--white-color);
+    border: 1.5px solid var(--grey-color);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.specialty-form__header {
+    margin-bottom: 25px;
+}
+
+.specialty-form__header h1 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.specialty-form__header p {
+    color: var(--text-dark);
+    font-size: .9rem;
+}
+
+#specialty-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    color: var(--primary-color);
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--grey-color);
+    border-radius: 5px;
+    background-color: var(--tercer-color);
+    color: var(--text-dark);
+    font-family: inherit;
+    outline: none;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+}
+
+.form-error {
+    min-height: 18px;
+    color: #dc2626;
+    font-size: .8rem;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    cursor: pointer;
+    font-size: .95rem;
+    transition:
+        background-color .2s ease,
+        color .2s ease;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
