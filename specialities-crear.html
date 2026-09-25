@@ -1,0 +1,136 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Registrar Nueva Especialidad</title>
+    <link rel="stylesheet" href="/css/dashboardAdmin.css">
+    <link rel="stylesheet" href="specialities_style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="/js/dashboardAdmin.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="navbar navbar--open">
+            <div class="navbar__header">
+                <div class="navbar__header-title">
+                    <h2>Admin Portal</h2>
+                    <span>Healthcare Management</span>
+                </div>
+                <button class="navbar__close" type="button" aria-label="Cerrar menú">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <div class="navbar__menu">
+                <ul class="navbar__menu-list">
+                    <li class="navbar__menu-item">
+                        <a href="dashboardAdmin.html">
+                            <span class="material-symbols-outlined">dashboard</span>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="navbar__menu-item">
+                        <a href="#">
+                            <span class="material-symbols-outlined">medical_services</span>
+                            Doctores
+                        </a>
+                    </li>
+                    <li class="navbar__menu-item">
+                        <a href="specialities.html" class="active">
+                            <span class="material-symbols-outlined">category</span>
+                            Especialidades
+                        </a>
+                    </li>
+                    <li class="navbar__menu-item">
+                        <a href="#">
+                            <span class="material-symbols-outlined">person_search</span>
+                            Búsqueda de Pacientes
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar__footer">
+                <ul class="navbar__footer-list">
+                    <li class="navbar__footer-item">
+                        <a href="#">
+                            <span class="material-symbols-outlined">settings</span>
+                            Configuración
+                        </a>
+                    </li>
+                    <li class="navbar__footer-item">
+                        <a href="#">
+                            <span class="material-symbols-outlined">logout</span>
+                            Cerrar Sesión
+                        </a>
+                    </li>
+                </ul>
+                <div class="user-session">
+                    <img src="/img/Editada.png" alt="Usuario" class="user-picture">
+                    <div class="user-info">
+                        <h5 class="user-info__name">Milena Coronel</h5>
+                        <p class="user-info__cargo">Administrador</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="navbar-overlay"></div>
+
+        <main class="dashboard">
+            <button class="navbar__toggle" type="button" aria-label="Abrir menú">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            
+            <div class="breadcrumbs">
+                <a href="specialities.html">Especialidades</a>
+                <span class="material-symbols-outlined separator">chevron_right</span>
+                <span class="current">Agregar Nueva Especialidad</span>
+            </div>
+
+            <div class="content-header form-header">
+                <div>
+                    <h1 class="page-title">Registrar Nueva Especialidad</h1>
+                    <p class="page-subtitle">Complete la información técnica y administrativa para dar de alta una especialidad médica en el sistema hospitalario.</p>
+                </div>
+            </div>
+            
+            <div class="form-card">
+                <form action="#" method="POST">
+                    
+                    <div class="form-group">
+                        <label for="nombre">Nombre de la Especialidad</label>
+                        <input type="text" id="nombre" placeholder="Ej. Cardiología Intervencionista">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="descripcion">Descripción</label>
+                        <textarea id="descripcion" rows="6" placeholder="Detalle el alcance de la especialidad, procedimientos principales y requisitos de derivación..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="estado">Estado inicial</label>
+                        <div class="select-wrapper">
+                            <select id="estado">
+                                <option>Activo - Disponible para programación</option>
+                                <option>Inactivo - No disponible</option>
+                            </select>
+                            <span class="material-symbols-outlined select-icon">keyboard_arrow_down</span>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-cancelar">Cancelar</button>
+                        <button type="submit" class="btn-guardar">
+                            <span class="material-symbols-outlined">save</span> Guardar Especialidad
+                        </button>
+                    </div>
+                    
+                </form>
+            </div>
+        </main>
+    </div>        
+</body>
+</html>
