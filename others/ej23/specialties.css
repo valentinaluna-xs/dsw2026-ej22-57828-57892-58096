@@ -1,0 +1,136 @@
+:root {
+    --primary-color: #0a3b73;
+    --secondary-color: #c3eeff;
+    --background-color: #edf6ff;
+    --white-color: #ffffff;
+    --text-dark: #1f2937;
+    --grey-color: #989898;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100dvh;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-dark);
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.dashboard__header {
+    margin-bottom: 30px;
+}
+
+.dashboard__header h1 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.dashboard__header p {
+    color: var(--text-dark);
+    font-size: .95rem;
+}
+
+.search {
+    margin-bottom: 20px;
+}
+
+.search > label {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.search__group {
+    display: flex;
+    gap: 10px;
+}
+
+.search__group input {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid var(--grey-color);
+    border-radius: 5px;
+    background-color: var(--white-color);
+    color: var(--text-dark);
+    font-size: .95rem;
+    outline: none;
+}
+
+.search__group input:focus {
+    border-color: var(--primary-color);
+}
+
+.search__group button {
+    padding: 10px 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    cursor: pointer;
+    font-size: .95rem;
+    transition:
+        background-color .2s ease,
+        color .2s ease;
+}
+
+.search__group button:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    background-color: var(--white-color);
+    border: 1px solid var(--grey-color);
+    border-radius: 8px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table thead {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.table th {
+    padding: 12px 15px;
+    text-align: left;
+    font-size: .95rem;
+}
+
+.table td {
+    padding: 12px 15px;
+    border-top: 1px solid var(--grey-color);
+    font-size: .9rem;
+    line-height: 1.5;
+}
+
+.table tbody tr {
+    transition: background-color .2s ease;
+}
+
+.table tbody tr:hover {
+    background-color: var(--background-color);
+}
+
+.table tbody td:first-child {
+    width: 30%;
+    color: var(--primary-color);
+    font-weight: 600;
+}
