@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Admin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/loginAdmin.css">
+</head>
+
+<body>
+    <main class="login">
+        <div class="login__header">
+            <span class="material-symbols-outlined header__logo">health_and_safety</span>
+            <h1 class="header__name">MedPortal</h1>
+        </div>
+        <div class="login__content">
+            <div class="login-bienvenida">
+                <h2>Bienvenido de nuevo</h2>
+                <p>Por favor, autentíquese para acceder al portal de proveedores.</p>
+            </div>
+            <form class="login-form">
+                <label for="username" class="form-label">Nombre de Usuario</label>
+                <label class="input-group" for="username">
+                    <span class="material-symbols-outlined input-group__icon">account_circle</span>
+                    <input type="text" id="username" name="username" required placeholder="Ingrese ID de admin">
+                </label>
+                <label for="password" class="form-label">Contraseña</label>
+                <label class="input-group" for="password">
+                    <span class="material-symbols-outlined input-group__icon">lock</span>
+                    <input type="password" id="password" name="password" required placeholder="Ingrese contraseña">
+                </label>
+                <button type="submit">Iniciar Sesión <span
+                        class="material-symbols-outlined button__icon">login</span></button>
+            </form>
+        </div>
+        <div class="login__info">
+            <span class="material-symbols-outlined">verified_user</span>
+            <p>
+                <b>Solo Acceso Seguro:</b> Este sistema es para personal médico autorizado. Los intentos de
+                acceso no autorizados son registrados y monitoreados para su cumplimiento.
+            </p>
+        </div>
+    </main>
+</body>
+
+</html>
