@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin - Especialidad - Listado</title>
-    <link rel="stylesheet" href="/css/dashboardAdmin.css">
-    <link rel="stylesheet" href="/css/specialities_style.css">
+    <title>Admin - Especialidades</title>
+    <link rel="stylesheet" href="../css/dashboardAdmin.css">
+    <link rel="stylesheet" href="../css/specialities_style.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <script src="/js/dashboardAdmin.js" defer></script>
-    <script src="specialities.js" defer></script>
+        <script src="../js/dashboardAdmin.js" defer></script>
+        <script src="../js/specialities.js" defer></script>
 </head>
 
 <body>
@@ -87,63 +87,70 @@
                 <span class="material-symbols-outlined">menu</span>
             </button>
 
-            <div class="content-header">
+            <div class="dashboard__header">
                 <div class="dashboard__header-content">
                     <h1>Directorio de Especialidades</h1>
                     <p>Administre las categorías médicas y servicios del hospital.</p>
                 </div>
                 <div class="header-actions">
-                    <input type="text" id="searchInput" placeholder="Buscar especialidad...">
-                    <a href="/templates/specialities-crear.html" class="btn-primary">+ Nueva Especialidad</a>
+                    <label class="input-group" for="searchInput">
+                        <span class="material-symbols-outlined input-group__icon">search</span>
+                        <input type="text" id="searchInput" placeholder="Buscar especialidad...">
+                    </label>
+                    <a href="/templates/specialities-crear.html" class="menu-btn menu-btn-primary">
+                        <span class="material-symbols-outlined">add</span>
+                        Nueva Especialidad
+                    </a>
                 </div>
             </div>
 
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nombre de la Especialidad</th>
-                            <th>Descripción</th>
-                            <th>Estado</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody id="specialities-table-body">
-                    </tbody>
-                </table>
-            </div>
+            <section class="dashboard__table">
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre de la Especialidad</th>
+                                <th>Descripción</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="specialities-table-body">
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
             <section class="dashboard__stats">
                 <div class="dashboard-card">
                     <div class="card__header">
                         <span class="material-symbols-outlined">format_list_bulleted</span>
+                        <p class="card__header-info">Total</p>
                     </div>
                     <div class="card__content">
                         <p class="card__content-title">TOTAL ESPECIALIDADES</p>
-                        <p class="card__content-cant">24</p>
-                        <span class="card__trend">~ +2 este trimestre</span>
+                        <p class="card__content-cant">0</p>
                     </div>
                 </div>
                 <div class="dashboard-card">
                     <div class="card__header">
                         <span class="material-symbols-outlined">favorite</span>
+                        <p class="card__header-info">Demanda</p>
                     </div>
                     <div class="card__content">
                         <p class="card__content-title">MÁS DEMANDADA</p>
-                        <p class="card__content-cant" style="font-size: 1.1rem; color: var(--primary-color);">
-                            Cardiología</p>
-                        <span class="card__trend">15% incremento en citas</span>
+                        <p class="card__content-cant" style="font-size: 1.1rem;">Cardiología</p>
                     </div>
                 </div>
                 <div class="dashboard-card">
-                    <div class="card__header"
-                        style="background-color: var(--secondary-color); color: var(--active-color);">
+                    <div class="card__header">
                         <span class="material-symbols-outlined">verified</span>
+                        <p class="card__header-info">Nuevas</p>
                     </div>
                     <div class="card__content">
                         <p class="card__content-title">NUEVAS ESTE MES</p>
                         <p class="card__content-cant">03</p>
-                        <span class="card__trend">Psicología, Nutrición...</span>
                     </div>
                 </div>
             </section>
