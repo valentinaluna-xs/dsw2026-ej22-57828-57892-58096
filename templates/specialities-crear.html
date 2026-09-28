@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Crear Especialidad</title>
+    <link rel="stylesheet" href="../css/dashboardAdmin.css">
+    <link rel="stylesheet" href="../css/specialities_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="../js/dashboardAdmin.js" defer></script>
+    <script src="../js/specialities-crear.js" defer></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="navbar navbar--open">
+            <div class="navbar__header">
+                <div class="navbar__header-title">
+                    <h2>Admin Portal</h2>
+                    <span>Healthcare Management</span>
+                </div>
+                <button class="navbar__close" type="button" aria-label="Cerrar menú">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <div class="navbar__menu">
+                <ul class="navbar__menu-list">
+                    <li class="navbar__menu-item">
+                        <a href="dashboard.html">
+                            <span class="material-symbols-outlined">dashboard</span>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="navbar__menu-item">
+                        <a href="specialities.html" class="active">
+                            <span class="material-symbols-outlined">category</span>
+                            Especialidades
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar__footer">
+                <div class="user-session">
+                    <div class="user-info">
+                        <h5 class="user-info__name">Luna Acosta</h5>
+                        <p class="user-info__cargo">Administrador</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="navbar-overlay"></div>
+
+        <main class="dashboard">
+            <button class="navbar__toggle" type="button" aria-label="Abrir menú">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+
+            <div class="dashboard__header">
+                <div class="dashboard__header-content">
+                    <h1>Crear Nueva Especialidad</h1>
+                    <p>Complete los datos requeridos.</p>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <form id="specialty-form" novalidate>
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" maxlength="15" placeholder="Nombre de la especialidad">
+                        <span id="error-nombre" class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="descripcion">Descripción</label>
+                        <textarea id="descripcion" name="descripcion" maxlength="100" placeholder="Descripción breve"></textarea>
+                        <span id="error-descripcion" class="error-message"></span>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="menu-btn menu-btn-primary">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

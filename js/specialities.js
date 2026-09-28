@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 tbody.appendChild(fila);
             });
 
-            // Actualizar contador dinámico en la tarjeta
             if (cardCantidad) {
                 cardCantidad.textContent = data.length;
             }
