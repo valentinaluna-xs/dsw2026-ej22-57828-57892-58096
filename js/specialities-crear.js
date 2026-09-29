@@ -35,16 +35,23 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             if (isValid) {
+                let specialties = JSON.parse(localStorage.getItem('specialties')) || [];
+
                 const nuevaEspecialidad = {
-                    id: Date.now(), 
-                    nombre: nombreVal,
-                    descripcion: descripcionVal
+                    id: crypto.randomUUID(), 
+                    name: nombreVal,
+                    description: descripcionVal
                 };
 
-                console.log('Objeto de especialidad creado:', nuevaEspecialidad);
-                alert('¡Especialidad creada con éxito! (Ver consola)');
+                specialties.push(nuevaEspecialidad);
+                localStorage.setItem('specialties', JSON.stringify(specialties));
+
+                console.log('Especialidad guardada en localStorage:', nuevaEspecialidad);
+                alert('¡Especialidad creada con éxito!');
                 
                 form.reset();
+
+                window.location.href = 'specialities.html';
             }
         });
     }

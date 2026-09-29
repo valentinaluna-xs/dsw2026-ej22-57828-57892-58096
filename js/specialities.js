@@ -3,47 +3,50 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchInput = document.getElementById('searchInput');
     const cardCantidad = document.querySelector('.dashboard-card .card__content-cant');
 
-    fetch('specialties.json')
-        .then(respuesta => respuesta.json())
-        .then(data => {
-            tbody.innerHTML = ""; 
-            data.forEach(item => {
-                const fila = document.createElement('tr');
-                fila.innerHTML = `
-                    <td>${item.id}</td>
-                    <td><strong>${item.name}</strong></td>
-                    <td>${item.description}</td>
-                    <td><span class="status status--active">Activo</span></td>
-                    <td>
-                        <button class="btn-edit" title="Editar">
-                            <span class="material-symbols-outlined">edit</span>
-                        </button>
-                        <button class="btn-delete" title="Eliminar">
-                            <span class="material-symbols-outlined">delete</span>
-                        </button>
-                    </td>`;
-                tbody.appendChild(fila);
-            });
+    let specialties = JSON.parse(localStorage.getItem('specialties')) || [];
 
-            if (cardCantidad) {
-                cardCantidad.textContent = data.length;
-            }
-        })
-        .catch(error => console.error('Error al cargar el JSON:', error));
+    function renderTable(data) {
+        tbody.innerHTML = ""; 
+
+        if (data.length === 0) {
+            tbody.innerHTML = `<tr><td colspan="5" style="text-align: center; color: var(--grey-color);">No hay especialidades registradas.</td></tr>`;
+            if (cardCantidad) cardCantidad.textContent = 0;
+            return;
+        }
+
+        data.forEach(item => {
+            const fila = document.createElement('tr');
+            fila.innerHTML = `
+                <td>${item.id}</td>
+                <td><strong>${item.name}</strong></td>
+                <td>${item.description}</td>
+                <td><span class="status status--active">Activo</span></td>
+                <td>
+                    <button class="btn-edit" title="Editar">
+                        <span class="material-symbols-outlined">edit</span>
+                    </button>
+                    <button class="btn-delete" title="Eliminar">
+                        <span class="material-symbols-outlined">delete</span>
+                    </button>
+                </td>`;
+            tbody.appendChild(fila);
+        });
+
+        if (cardCantidad) {
+            cardCantidad.textContent = data.length;
+        }
+    }
+
+    renderTable(specialties);
 
     if (searchInput) {
         searchInput.addEventListener('input', (e) => {
             const textoBusqueda = e.target.value.toLowerCase().trim();
-            const filas = document.querySelectorAll('#specialities-table-body tr');
-
-            filas.forEach(fila => {
-                const contenidoFila = fila.textContent.toLowerCase();
-                if (contenidoFila.includes(textoBusqueda)) {
-                    fila.style.display = ''; 
-                } else {
-                    fila.style.display = 'none'; 
-                }
-            });
+            const filteredData = specialties.filter(item => 
+                item.name.toLowerCase().includes(textoBusqueda) || 
+                item.description.toLowerCase().includes(textoBusqueda)
+            );
+            renderTable(filteredData);
         });
     }
 });
