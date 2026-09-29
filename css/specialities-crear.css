@@ -116,7 +116,6 @@
     pointer-events: none;
 }
 
-/* Botones */
 .form-actions {
     display: flex;
     justify-content: flex-end;
